@@ -1,0 +1,66 @@
+In this repository is my calendar generating program written in Python and generated using pyinstaller for Windows called ppc.exe gotten from PrettyPrintableCalendar.
+
+The program was written to provide for my bride attractive-looking monthly calendars from January to December which could be attached to the refrigerator to provide upcoming birthdays, anniversaries, appointments and holidays at a glance.
+
+Space is provided to add events by pencil or pen.
+
+I used to provide calendars like these that I made with a spreadsheet program and it would take about an hour or more to produce what this app produces nearly instantly.
+
+I wanted to learn Python and thought that making a calendar app using this language would be a good idea.  Tips from family members and wishes to improve my program resulted in what I have done today.
+
+The program wakes up in the current month and year and today is highlighted.
+
+Holidays are automatically entered into days from 3 text files called StaticHolidays.txt, xxxxFloatHolidays.txt, where xxxx are years from 2026 to 2034, and PersonalEvents.txt which the user can create on the fly.
+
+These 3 text files can be modified in any text editor to add, remove or edit holidays and events to the user's wishes.
+If you accidently delete or wrongfully place a comma, quotation mark, parenthesis or bracket the program will display a message telling which file has been corrupted and wait 6 seconds and then exit to let the user correct the error. It appears that the Windows version of my program catches syntax errors before my program code does and displays an error message and then halts. The PersonalEvents.txt file is automatically generated and updated when the user clicks into the comments field, moves the cursor over the date desired and then types a comment and hits <enter>.  Moving the cursor over another date and then hitting <enter> again will put that same comment into that date.  This makes multiple same comment entries easy.
+
+In order to produce a better-looking print out, the up arrow can be used to toggle the text boxes, buttons and highlighted current day off and on.
+
+The down arrow can then be used to produce a png file called MonthlyCalendar with date and time information attached to the name.  This png file can be turned into a pdf file by any number of apps to help produce an 11 by 8 1/2 inch landscape printout with 1/2 inch margins all around with colored Month and Year varying for each month.
+
+If the user wishes to have a calendar that is totally blank with no holidays, simply delete all txt files but this one which is Readme.txt.
+
+The app shows a monthly calendar with 2 smaller calendars showing the previous and next months.
+2 buttons let the user go forward and backward in months and the month and year text boxes update automatically.
+The user can also click on the month or year input text boxes and use the backspace key, enter the new month and hit <enter> or enter the new year and hit <enter> and show any desired month in any desired year.  If the user wishes to know what day he/she was born on, that would be easy.  I used the fact that I was born on a Friday and that my spouse was born on a Sunday during the development of this program to help ensure that my logic was correct.
+
+As mentioned above, click on the comments field, highlight the desired day with the cursor, enter any text and hit <enter> and comments can be added to the highlighted day and are saved to the PersonalEvents.txt file.  If you highlight any day that has a PersonEvents.txt comment on it and hit the DELETE key, that comment will be deleted and it will also be removed from the PersonalEvents.txt file so that editing user entered events is easy.  If you prefer to edit the PersonalEvents.txt file directly in any text editor, that would be okay too.  Just be careful with punctuation or the calendar app will not run. Also, if you enter a comment into any day that has a holiday already, that comment will overwrite the previously viewed holiday but moving forward or backward until the year changes or exiting and restarting the calendar app will show the previous holiday plus the just entered comment with 4 spaces in between them.  Please note that all holidays and events are word-wrapped to make the text look prettier.
+
+This repository comes with a ppc.exe Windows file which can be executed in any Windows environment by double-clicking.  I wanted to include a Linux binary file but it would not work on all versions of Linux so instead, I am adding instructions that I used in my Manjaro Linux environment to produce an executable which I call ppc.bin.
+
+Before trying to run my main.py source code in a Python IDE, pygame and pygame-widgets must be installed. I have lately been having difficulty with pygame-widgets where the newest version seems to produce a text box that works properly if you input information but the cursor and the text entered do not appear on the screen.  The way I fixed this was by finding a pygame-widgets folder from about a year ago and replacing the new pygame-widgets folder with the year-old one and the text boxes behave as normal.  I reported this to the pygame-widgets Github as a bug in October 2025 but nothing has been done to fix this.  In my repository I have a copy of this older folder for you to replace in your Python environment.  It seems to go in the folder under the Python3.xx folder called site-packages.
+
+The following are instructions if you wish to create an executable version of my calendar program in Linux.
+
+Go to a terminal window and navigate to the directory where you have placed the files from my repository including main.py.
+
+In my Manjaro Linux version, producing an executable file must be done in a virtual environment so type the following:
+    python3 -m venv .venv
+    source .venv/bin/activate
+A virtual environment is created to keep the rest of your operating system safe.
+Make sure pip is installed by typing:
+    pip --version
+If it's not, then install it using your Linux distributions instructions which can be found online.
+Now we need to install pyinstaller by typing:
+    pip install pyinstaller
+Next we run pyinstaller with the following:
+    pyinstaller --onefile main.py
+Pyinstaller creates a dist folder where a Linux executable called main is placed.
+Copy this file and place it in your folder where main.py is using your file manager or by using Linux copy commands if you know how to do that.
+You can click on this file and click Launch to run the calendar program or from your terminal you can navigate to the folder where main.py and main are now located and type ./main and that will run the calendar program.
+In your terminal type deactivate and that will release your virtual environment.
+It's not necessary but I renamed main to ppc.bin to be consistent with my repository title.
+
+This is my first attempt at writing a Python program using classes and methods and I think I came up with an attractive and useful app.  If you use and enjoy this program than I am pleased.
+
+Ed Garcia
+Duson, LA USA
+
+
+
+
+
+
+
+
