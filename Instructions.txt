@@ -1,5 +1,5 @@
 
-Why I wrote thie program:
+Why I wrote this program:
 
 In this repository is my calendar generating program written in Python and generated using pyinstaller for Windows called ppc.exe gotten from PrettyPrintableCalendar.
 
