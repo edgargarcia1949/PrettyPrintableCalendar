@@ -1,3 +1,6 @@
+
+Why I wrote thie program:
+
 In this repository is my calendar generating program written in Python and generated using pyinstaller for Windows called ppc.exe gotten from PrettyPrintableCalendar.
 
 The program was written to provide for my bride attractive-looking monthly calendars from January to December which could be attached to the refrigerator to provide upcoming birthdays, anniversaries, appointments and holidays at a glance.
@@ -8,18 +11,20 @@ I used to provide calendars like these that I made with a spreadsheet program an
 
 I wanted to learn Python and thought that making a calendar app using this language would be a good idea.  Tips from family members and wishes to improve my program resulted in what I have done today.
 
+About the program:
+
 The program wakes up in the current month and year and today is highlighted.
 
 Holidays are automatically entered into days from 3 text files called StaticHolidays.txt, xxxxFloatHolidays.txt, where xxxx are years from 2026 to 2034, and PersonalEvents.txt which the user can create on the fly.
 
 These 3 text files can be modified in any text editor to add, remove or edit holidays and events to the user's wishes.
-If you accidently delete or wrongfully place a comma, quotation mark, parenthesis or bracket the program will display a message telling which file has been corrupted and wait 6 seconds and then exit to let the user correct the error. It appears that the Windows version of my program catches syntax errors before my program code does and displays an error message and then halts. The PersonalEvents.txt file is automatically generated and updated when the user clicks into the comments field, moves the cursor over the date desired and then types a comment and hits <enter>.  Moving the cursor over another date and then hitting <enter> again will put that same comment into that date.  This makes multiple same comment entries easy.
+If you accidently delete or wrongfully place a comma, quotation mark, parenthesis or bracket the program will display a message telling which file has been corrupted and wait 6 seconds and then exit to let the user correct the error. It appears that the Windows version of my program catches syntax errors before my program code does and displays an error message and then halts. The PersonalEvents.txt file is automatically generated and updated when the user clicks into the comments field, moves the cursor over the date desired and then types a comment and hits <enter>.  Moving the cursor over another date and then hitting <enter> again will put that same comment into that date.  This makes multiple same-comment entries easy.
 
-In order to produce a better-looking print out, the up arrow can be used to toggle the text boxes, buttons and highlighted current day off and on.
+In order to produce a better-looking print out, the up arrow can be used to toggle the text boxes, buttons and highlighted current-day off and on.
 
 The down arrow can then be used to produce a png file called MonthlyCalendar with date and time information attached to the name.  This png file can be turned into a pdf file by any number of apps to help produce an 11 by 8 1/2 inch landscape printout with 1/2 inch margins all around with colored Month and Year varying for each month.
 
-If the user wishes to have a calendar that is totally blank with no holidays, simply delete all txt files but this one which is Readme.txt.
+If the user wishes to have a calendar that is totally blank with no holidays, simply delete all txt files but this one which is Instructions.txt.
 
 The app shows a monthly calendar with 2 smaller calendars showing the previous and next months.
 2 buttons let the user go forward and backward in months and the month and year text boxes update automatically.
@@ -31,7 +36,7 @@ This repository comes with a ppc.exe Windows file which can be executed in any W
 
 Before trying to run my main.py source code in a Python IDE, pygame and pygame-widgets must be installed. I have lately been having difficulty with pygame-widgets where the newest version seems to produce a text box that works properly if you input information but the cursor and the text entered do not appear on the screen.  The way I fixed this was by finding a pygame-widgets folder from about a year ago and replacing the new pygame-widgets folder with the year-old one and the text boxes behave as normal.  I reported this to the pygame-widgets Github as a bug in October 2025 but nothing has been done to fix this.  In my repository I have a copy of this older folder for you to replace in your Python environment.  It seems to go in the folder under the Python3.xx folder called site-packages.
 
-The following are instructions if you wish to create an executable version of my calendar program in Linux.
+How I created a Linux executable:
 
 Go to a terminal window and navigate to the directory where you have placed the files from my repository including main.py.
 
@@ -52,7 +57,7 @@ You can click on this file and click Launch to run the calendar program or from 
 In your terminal type deactivate and that will release your virtual environment.
 It's not necessary but I renamed main to ppc.bin to be consistent with my repository title.
 
-This is my first attempt at writing a Python program using classes and methods and I think I came up with an attractive and useful app.  If you use and enjoy this program than I am pleased.
+This is my first attempt at writing a semi-professional Python program using classes and methods and I think I came up with an attractive and useful app.  If you use and enjoy this program than I am pleased.
 
 Ed Garcia
 Duson, LA USA
