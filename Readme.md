@@ -40,7 +40,7 @@ Starts in current month and year with today highlighted.
 
 Double click on ppc.exe to run in Windows.
 
-In Linux, follow instructions in Readme.txt file.
+In Linux, follow instructions in Instructions.txt file.
 
 
 
@@ -48,7 +48,8 @@ In Linux, follow instructions in Readme.txt file.
 
 I would like the print out feature to automatically print out a perfect calendar month and not have to convert the png file.
 
-I would like to be able to write my own input module and not rely on "pygame-widgets" which has become a problem as written about in the Readme.txt file.
+I would like to be able to write my own input module and not rely on "pygame-widgets" which has become a problem as written about in the Instructions.txt file.
 
 I would also like to produce a European calendar where I understand the week starts on Monday.
+
 
